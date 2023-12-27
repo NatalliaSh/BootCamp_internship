@@ -1,0 +1,53 @@
+$color-white: #fff;
+
+// background
+$color-bg-page: #1f2432;
+$color-bg-modal: #2e3346;
+$color-bg-avatar: #cce3ff;
+$color-bg-inactive-tab: rgba(31 36 50 / 72%);
+
+// shadow
+$color-pop-up-shadow: rgba(9 18 31 / 24%);
+$color-block-shadow: rgba(9 18 31 / 16%);
+
+// btn (primary, default), Modal-borders, button-secondary-border
+$color-primary-default: #7bcece;
+
+// input
+$color-primary-focus: rgba(123 206 206 / 12%);
+$color-primary-error: rgba(255 125 141 / 8%);
+$color-border-input-default: rgba(255 255 255 / 50%);
+$color-border-input-focus: #7bcece;
+$color-border-input-error: #ff7d8d;
+$color-border-input-autofill: #b4b2b2;
+
+// button
+$color-primary-hover: #8aeadc;
+$color-primary-pressed: #71c4c4;
+$color-primary-shadow: rgba(9 18 31 / 24%);
+$color-secondary-shadow-hover: rgba(128 224 210 / 24%);
+$color-secondary-shadow-pressed: rgba(31 36 50 / 88%);
+
+// text
+$color-text-primary: #fff;
+$color-text-placeholder: rgba(255 255 255 / 30%);
+$color-text-placeholder-focus: rgba(123 206 206 / 50%);
+$color-text-placeholder-error: rgba(255 255 255 / 30%);
+$color-text-error-message: #ff7d8d;
+$color-text-link-default: #89beff;
+$color-text-link-hover: #338fff;
+$color-text-link-pressed: #338fff;
+$color-text-title-start: #7bcece; // First letter in title
+$color-text-primary-button: #2e3346;
+$color-text-hint: #7bcece;
+
+// scrollbar hover
+$color-scrollbar: rgba(255 255 255 / 50%);
+$color-scrollbar-hover: rgba(255 255 255 / 30%);
+
+@mixin color-text-title-gradient {
+  background-color: #7bcece;
+  background-image: linear-gradient(89.95deg, #7bcece 28.86%, #89beff 111.14%);
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}

@@ -1,0 +1,149 @@
+@import './colors.scss';
+
+@mixin title {
+  @include color-text-title-gradient;
+
+  font: {
+    family: 'Ubuntu', sans-serif;
+    weight: 700;
+    size: 64px;
+  }
+
+  line-height: 74px;
+}
+
+@mixin headline-1 {
+  font: {
+    family: 'Ubuntu', sans-serif;
+    weight: 500;
+    size: 32px;
+  }
+
+  line-height: 37px;
+  color: $color-text-primary;
+}
+
+@mixin headline-2 {
+  font: {
+    family: 'Inter', sans-serif;
+    weight: 500;
+    size: 32px;
+  }
+
+  color: $color-text-primary;
+}
+
+@mixin headline-3 {
+  font: {
+    family: 'Inter', sans-serif;
+    weight: 500;
+    size: 24px;
+  }
+
+  line-height: 29px;
+  color: $color-text-primary;
+}
+
+@mixin menu {
+  font: {
+    family: 'Ubuntu', sans-serif;
+    weight: 400;
+    size: 20px;
+  }
+
+  line-height: 24px;
+  color: $color-text-primary;
+}
+
+@mixin menu-active {
+  font: {
+    family: 'Ubuntu', sans-serif;
+    weight: 500;
+    size: 20px;
+  }
+
+  line-height: 24px;
+  color: $color-text-primary;
+}
+
+@mixin body {
+  font: {
+    family: 'Inter', sans-serif;
+    weight: 400;
+  }
+
+  color: $color-text-primary;
+}
+
+@mixin body-large {
+  @include body;
+
+  font-size: 20px;
+  line-height: 24px;
+}
+
+@mixin body-medium-regular {
+  @include body;
+
+  font-size: 16px;
+  line-height: 24px;
+}
+
+@mixin body-small-semi-bold {
+  font: {
+    family: 'Inter', sans-serif;
+    weight: 600;
+    size: 14px;
+  }
+
+  line-height: 17px;
+  color: $color-text-primary;
+}
+
+@mixin body-medium-semi-bold {
+  font: {
+    family: 'Inter', sans-serif;
+    weight: 600;
+    size: 16px;
+  }
+
+  line-height: 24px;
+  color: $color-text-primary;
+}
+
+@mixin body-small {
+  @include body;
+
+  font-size: 14px;
+  line-height: 17px;
+}
+
+@mixin button {
+  font: {
+    family: 'Inter', sans-serif;
+    weight: 600;
+    size: 16px;
+  }
+
+  color: $color-text-primary-button;
+}
+
+@mixin link {
+  font: {
+    family: 'Inter', sans-serif;
+    weight: 400;
+    size: 16px;
+  }
+
+  color: $color-text-link-default;
+}
+
+@mixin avatar {
+  font: {
+    family: 'Inter', sans-serif;
+    weight: 500;
+    size: 64px;
+  }
+
+  color: $color-bg-modal;
+}

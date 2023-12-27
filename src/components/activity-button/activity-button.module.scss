@@ -1,0 +1,42 @@
+@import '../../styles/typography.scss';
+@import '../../styles/colors.scss';
+
+.user-menu {
+  @include body-large;
+
+  width: 32px;
+  height: 32px;
+  background-color: transparent;
+  border: none;
+  color: $color-white;
+  outline: none;
+
+  &:focus-visible {
+    outline: 1px solid $color-white;
+    border-radius: 3px;
+  }
+
+  &::after {
+    content: '...';
+    display: block;
+    font-size: 22px;
+    transform: rotate(90deg);
+    position: relative;
+    left: 6px;
+  }
+
+  &:disabled {
+    color: $color-text-placeholder-error;
+  }
+
+  &:hover {
+    cursor: pointer;
+    background-color: $color-bg-page;
+    border-radius: 4px;
+  }
+
+  &:disabled:hover {
+    cursor: not-allowed;
+    background-color: transparent;
+  }
+}

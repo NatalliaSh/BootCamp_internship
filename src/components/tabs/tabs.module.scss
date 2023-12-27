@@ -1,0 +1,69 @@
+@import '../../styles/colors.scss';
+@import '../../styles/typography.scss';
+
+.tabs-default {
+  height: 40px;
+  display: flex;
+  column-gap: 24px;
+  align-items: center;
+  width: fit-content;
+  border-bottom: 2px solid $color-border-input-default;
+
+  .tab-title {
+    @include body-medium-regular;
+
+    position: relative;
+    cursor: pointer;
+  }
+
+  .tab-title-active {
+    @include body-medium-semi-bold;
+
+    &::after {
+      content: '';
+      height: 2px;
+      width: 100%;
+      background-color: $color-primary-default;
+      position: absolute;
+      left: 0;
+      top: 31px;
+      z-index: 1;
+    }
+  }
+}
+
+.tabs-table {
+  height: 40px;
+  display: flex;
+  column-gap: 4px;
+  align-items: center;
+
+  .tab-title {
+    @include body-large;
+
+    padding: 8px 24px;
+    color: $color-text-placeholder;
+    border-radius: 4px 4px 0 0;
+    background-color: $color-bg-inactive-tab;
+    cursor: pointer;
+    position: relative;
+  }
+
+  .tab-title-active {
+    color: $color-text-primary;
+    border: solid 1px $color-border-input-default;
+    border-bottom: none;
+    background-color: $color-bg-page;
+
+    &::after {
+      content: '';
+      height: 1px;
+      width: 100%;
+      background-color: inherit;
+      position: absolute;
+      left: 0;
+      bottom: -1px;
+      z-index: 1;
+    }
+  }
+}

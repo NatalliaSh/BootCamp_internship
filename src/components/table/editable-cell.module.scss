@@ -1,0 +1,49 @@
+@import '../../styles/typography.scss';
+@import '../../styles/colors.scss';
+
+.field {
+  @include body-small;
+
+  width: 100%;
+  padding: 11px;
+  height: 40px;
+  text-align: inherit;
+  outline: none;
+  background-color: transparent;
+  border: 1px solid transparent;
+  resize: none;
+  display: block;
+  overflow: hidden;
+
+  &.big {
+    padding-top: 2px;
+    padding-bottom: 3px;
+  }
+
+  &:focus {
+    border: 1px solid $color-border-input-focus;
+  }
+
+  &.editable:focus {
+    background-color: $color-primary-focus;
+  }
+
+  &.header {
+    height: 48px;
+    padding-top: 15px;
+
+    &.big {
+      padding-top: 6px;
+      padding-bottom: 6px;
+    }
+  }
+
+  &.invalid {
+    background-color: $color-primary-error;
+    border: 1px solid $color-border-input-error;
+
+    &:focus {
+      background-color: $color-primary-error;
+    }
+  }
+}

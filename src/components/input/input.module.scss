@@ -1,0 +1,101 @@
+@import '../../styles/colors.scss';
+@import '../../styles/typography.scss';
+
+.field {
+  display: block;
+  width: 480px;
+  position: relative;
+
+  p {
+    padding-bottom: 4px;
+    line-height: 19px;
+  }
+
+  input {
+    @include body-medium-regular;
+
+    width: 100%;
+    padding: 12px;
+    border-radius: 4px;
+    border: 1px solid $color-border-input-default;
+    background: transparent;
+    line-height: 22px;
+
+    &::placeholder {
+      @include body-small;
+
+      color: $color-text-placeholder;
+    }
+
+    &:hover {
+      border-color: $color-border-input-focus;
+    }
+
+    &:focus {
+      background: $color-primary-focus;
+      border-color: $color-border-input-focus;
+      outline: 0;
+
+      &::placeholder {
+        color: $color-text-placeholder-focus;
+      }
+    }
+
+    &:-webkit-autofill {
+      border: 1px solid $color-border-input-autofill;
+      box-shadow: 0 0 0 30px $color-bg-modal inset;
+      -webkit-text-fill-color: $color-text-primary;
+      caret-color: $color-text-primary;
+    }
+  }
+
+  &.invalid {
+    color: $color-text-error-message;
+
+    input {
+      background-color: $color-primary-error;
+      border: 1px solid $color-border-input-error;
+
+      &:focus {
+        &::placeholder {
+          color: $color-text-placeholder-error;
+        }
+      }
+    }
+
+    .error {
+      @include body-small;
+
+      padding-top: 4px;
+      color: $color-text-error-message;
+    }
+  }
+
+  input:-webkit-autofill:focus,
+  input:-webkit-autofill:active {
+    border: 1px solid $color-border-input-focus;
+    caret-color: $color-primary-default;
+  }
+
+  .hint {
+    @include body-small;
+
+    padding-top: 4px;
+    color: $color-text-hint;
+
+    &-button {
+      position: absolute;
+      right: 10px;
+      top: 35px;
+      cursor: pointer;
+    }
+  }
+
+  ul {
+    padding-left: 24px;
+
+    li {
+      line-height: 17px;
+    }
+  }
+}

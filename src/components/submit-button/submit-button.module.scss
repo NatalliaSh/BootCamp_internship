@@ -1,0 +1,81 @@
+@import '../../styles/colors.scss';
+@import '../../styles/typography.scss';
+
+.button {
+  @include button;
+
+  width: 480px;
+  height: 48px;
+  border-radius: 4px;
+  padding: 12px 24px;
+  background-color: $color-primary-default;
+  border: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  &:hover {
+    background-color: $color-primary-hover;
+    box-shadow: 0 2px 4px 0 $color-secondary-shadow-hover;
+  }
+
+  &:active {
+    background-color: $color-primary-pressed;
+    box-shadow: 2px 2px 4px 0 $color-primary-shadow inset;
+  }
+
+  &_small {
+    width: 232px;
+  }
+
+  &_small-slim {
+    width: 168px;
+    height: 40px;
+  }
+
+  &_secondary,
+  &_secondary:hover,
+  &_secondary:active {
+    background-color: transparent;
+    border: 1px solid $color-primary-default;
+    color: $color-text-primary;
+  }
+
+  &_secondary:active {
+    border-color: $color-primary-pressed;
+    position: relative;
+    box-shadow: none;
+
+    &::after {
+      content: '';
+      box-shadow: 2px 2px 4px 0 $color-secondary-shadow-pressed inset;
+      position: absolute;
+      inset: -1px 0 0 -1px;
+      border-radius: 4px;
+    }
+  }
+
+  &:disabled {
+    opacity: 0.3;
+    cursor: default;
+
+    &:hover {
+      background-color: $color-primary-default;
+      box-shadow: none;
+    }
+
+    &:active {
+      background-color: $color-primary-default;
+      box-shadow: none;
+    }
+  }
+}
+
+.button-extra-small {
+  width: 172px;
+
+  svg {
+    fill: $color-bg-modal;
+  }
+}

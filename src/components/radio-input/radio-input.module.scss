@@ -1,0 +1,52 @@
+@import '../../styles/colors.scss';
+@import '../../styles/typography.scss';
+
+.label-wrapper {
+  position: relative;
+  cursor: pointer;
+
+  input {
+    appearance: none;
+    padding-right: 36px;
+
+    & ~ .custom-radio {
+      width: 24px;
+      height: 24px;
+      background-image: url('../../img/radio-input/default.svg');
+      position: absolute;
+      top: -2px;
+      left: 0;
+    }
+
+    &:focus-visible {
+      ~ .custom-radio {
+        &::after {
+          content: '';
+          width: 26px;
+          height: 26px;
+          border: solid 1px white;
+          border-radius: 50%;
+          position: absolute;
+          top: -2.25px;
+          right: -2.25px;
+        }
+      }
+    }
+
+    &:hover {
+      ~ .custom-radio {
+        background-image: url('../../img/radio-input/hover.svg');
+      }
+    }
+
+    &:checked {
+      & ~ .custom-radio {
+        background-image: url('../../img/radio-input/checked.svg');
+      }
+
+      & ~ .label-text {
+        @include body-medium-semi-bold;
+      }
+    }
+  }
+}

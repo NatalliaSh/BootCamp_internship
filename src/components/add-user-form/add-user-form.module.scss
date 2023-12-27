@@ -1,0 +1,25 @@
+.form {
+  margin-top: 56px;
+
+  label {
+    margin-bottom: 24px;
+  }
+
+  .radio-wrapper {
+    padding-bottom: 12px;
+
+    p {
+      margin-bottom: 16px;
+    }
+
+    label {
+      margin-right: 70px;
+    }
+  }
+
+  .buttons-wrapper {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 56px;
+  }
+}

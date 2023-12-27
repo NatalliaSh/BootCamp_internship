@@ -1,0 +1,13 @@
+@import '../../styles/colors.scss';
+@import '../../styles/typography.scss';
+
+.title {
+  @include headline-1;
+
+  margin-top: 24px;
+  margin-bottom: 16px;
+
+  &::first-letter {
+    color: $color-text-title-start;
+  }
+}

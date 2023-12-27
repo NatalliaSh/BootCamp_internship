@@ -1,0 +1,64 @@
+@import '../../styles/colors.scss';
+@import '../../styles/typography.scss';
+
+.header {
+  height: 72px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  background-color: $color-bg-page;
+  display: flex;
+  align-items: center;
+  column-gap: 64px;
+  padding: 0 48px;
+  z-index: 100;
+  box-shadow: 0 4px 8px 0 #09121f3d;
+
+  &::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    box-shadow: 0 2px 8px 0 #ffffff14 inset;
+    z-index: -1;
+  }
+
+  .wrapper {
+    flex: 1 0 fit-content;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    column-gap: 20px;
+
+    svg {
+      flex: 0 0 48px;
+    }
+
+    .navigation {
+      flex: 0 2 796px;
+      display: flex;
+      justify-content: space-between;
+      column-gap: 20px;
+
+      .page-link {
+        @include menu;
+
+        flex: 0 1 140px;
+        min-width: max-content;
+        padding: 12px 0;
+        text-align: center;
+        text-decoration: none;
+
+        &_active {
+          @include menu-active;
+
+          border-bottom: 2px solid $color-primary-default;
+          text-decoration: none;
+          padding: 12px 0;
+          flex: 0 1 140px;
+          text-align: center;
+        }
+      }
+    }
+  }
+}

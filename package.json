@@ -1,0 +1,82 @@
+{
+  "name": "bootcampboard.frontend",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "@lexical/react": "0.12.5",
+    "@reduxjs/toolkit": "1.9.7",
+    "@tanstack/react-table": "8.10.7",
+    "@testing-library/jest-dom": "5.17.0",
+    "@testing-library/react": "13.4.0",
+    "@testing-library/user-event": "13.5.0",
+    "@types/jest": "27.5.2",
+    "@types/node": "16.18.50",
+    "@types/react": "18.2.21",
+    "@types/react-dom": "18.2.7",
+    "async-mutex": "0.4.0",
+    "classnames": "2.3.2",
+    "history": "5.3.0",
+    "jwt-decode": "3.1.2",
+    "lexical": "0.12.5",
+    "react": "18.2.0",
+    "react-dom": "18.2.0",
+    "react-redux": "8.1.3",
+    "react-router-dom": "6.16.0",
+    "react-scripts": "5.0.1",
+    "typescript": "4.9.5",
+    "web-vitals": "2.1.4"
+  },
+  "scripts": {
+    "start": "env-cmd -f ./.env.local react-scripts start",
+    "build": "env-cmd -f ./.env.build react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject",
+    "check:spells": "cspell \"**\"",
+    "check:format": "prettier . --check",
+    "check:lint": "eslint . --ext .tsx,.ts --max-warnings 0",
+    "check:stylelint": "stylelint \"**/*.scss\"",
+    "check": "npm run check:lint && npm run check:format && npm run check:spells && npm run check:stylelint",
+    "prepare": "husky install"
+  },
+  "eslintConfig": {
+    "extends": [
+      "react-app",
+      "react-app/jest"
+    ]
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  },
+  "lint-staged": {
+    "*": [
+      "cspell --no-must-find-files",
+      "prettier --check"
+    ],
+    "*.{tsx,ts}": "eslint --max-warnings 0",
+    "*.scss": "stylelint"
+  },
+  "devDependencies": {
+    "@typescript-eslint/eslint-plugin": "6.7.4",
+    "@typescript-eslint/parser": "6.0.0",
+    "cspell": "7.3.6",
+    "env-cmd": "10.1.0",
+    "eslint": "8.49.0",
+    "eslint-config-prettier": "9.0.0",
+    "eslint-plugin-react-hooks": "4.6.0",
+    "husky": "8.0.3",
+    "lint-staged": "14.0.1",
+    "prettier": "3.0.3",
+    "sass": "1.68.0",
+    "stylelint": "15.10.3",
+    "stylelint-config-standard-scss": "11.0.0"
+  }
+}
